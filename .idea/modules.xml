@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/hibernate-demo/hibernate-demo.iml" filepath="$PROJECT_DIR$/hibernate-demo/hibernate-demo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/hibernate-mysql/hibernate-mysql.iml" filepath="$PROJECT_DIR$/hibernate-mysql/hibernate-mysql.iml" />
+      <module fileurl="file://$PROJECT_DIR$/hibernate-one-to-one/hibernate-one-to-one.iml" filepath="$PROJECT_DIR$/hibernate-one-to-one/hibernate-one-to-one.iml" />
+      <module fileurl="file://$PROJECT_DIR$/hibernate-tutorial.iml" filepath="$PROJECT_DIR$/hibernate-tutorial.iml" />
+      <module fileurl="file://$PROJECT_DIR$/hibernate_eager_lazy_demo/hibernate_eager_lazy_demo.iml" filepath="$PROJECT_DIR$/hibernate_eager_lazy_demo/hibernate_eager_lazy_demo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/hibernate_one_to_many/hibernate_one_to_many.iml" filepath="$PROJECT_DIR$/hibernate_one_to_many/hibernate_one_to_many.iml" />
+    </modules>
+  </component>
+</project>
