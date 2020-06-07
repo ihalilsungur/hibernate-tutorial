@@ -7,16 +7,18 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="hibernate_one_to_many" />
-        <module name="hibernate-mysql" />
-        <module name="hibernate-one-to-one" />
-        <module name="hibernate_eager_lazy_demo" />
         <module name="hibernate-demo" />
+        <module name="hibernate-one-to-one" />
+        <module name="hibernate-mysql" />
+        <module name="hibernate_eager_lazy_demo" />
+        <module name="hibernate-one-to-many-uni" />
+        <module name="hibernate_one_to_many" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="hibernate-demo" target="11" />
       <module name="hibernate-mysql" target="11" />
+      <module name="hibernate-one-to-many-uni" target="11" />
       <module name="hibernate-one-to-one" target="11" />
       <module name="hibernate-tutorial" target="11" />
       <module name="hibernate_eager_lazy_demo" target="11" />
