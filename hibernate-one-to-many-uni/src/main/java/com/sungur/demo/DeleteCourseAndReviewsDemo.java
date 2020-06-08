@@ -30,6 +30,7 @@ public class DeleteCourseAndReviewsDemo {
             // transaction baslatik
             session.beginTransaction();
 
+
           // Bir course getir
             long theId =3;
             Course tempCourse = session.get(Course.class,theId);

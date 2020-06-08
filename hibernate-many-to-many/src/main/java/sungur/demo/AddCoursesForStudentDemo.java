@@ -1,15 +1,12 @@
-package com.sungur.demo;
+package sungur.demo;
 
-import com.sungur.model.Course;
-import com.sungur.model.Instructor;
-import com.sungur.model.InstructorDetail;
-import com.sungur.model.Review;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
+import sungur.model.*;
 
 
-public class GetCourseAndReviewsDemo {
+public class AddCoursesForStudentDemo {
 
     public static void main(String[] args) {
 
@@ -19,6 +16,7 @@ public class GetCourseAndReviewsDemo {
                 .addAnnotatedClass(InstructorDetail.class)
                 .addAnnotatedClass(Course.class)
                 .addAnnotatedClass(Review.class)
+                .addAnnotatedClass(Student.class)
                 .buildSessionFactory();
 
         // session baslatma
@@ -30,17 +28,26 @@ public class GetCourseAndReviewsDemo {
             // transaction baslatik
             session.beginTransaction();
 
+            // course Ongreciler eklenmesi
+            long theStudent=1;
+            Student tempStudent = session.get(Student.class,theStudent);
+            System.out.println("Yuklenen Ogrenci : "+tempStudent);
+            System.out.println("Course : "+tempStudent.getCourses());
+
+            // Birden cok kurs olusturma
+            Course tempCourse = new Course("Hibernate Kursu");
+            Course tempCourse2 = new Course("MySql Kursu");
+
+            //  Ogrenciye Kurs Ekleme
+            tempCourse.addStudent(tempStudent);
+            tempCourse2.addStudent(tempStudent);
+
+            // Kurslari kaydetme
+            System.out.println("Kurslari Kaydetme");
+            session.save(tempCourse);
+            session.save(tempCourse2);
 
 
-          // Bir course getir
-            long theId =4;
-            Course tempCourse = session.get(Course.class,theId);
-
-            // kursu yazdir
-            System.out.println(tempCourse);
-
-            // Bir kursa bagli reviews yazdir
-            System.out.println(tempCourse.getReviews());
 
 
             //commit transaction

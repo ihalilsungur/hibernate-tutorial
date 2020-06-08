@@ -9,6 +9,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="hibernate-demo" />
         <module name="hibernate-one-to-one" />
+        <module name="hibernate-many-to-many" />
         <module name="hibernate-mysql" />
         <module name="hibernate_eager_lazy_demo" />
         <module name="hibernate-one-to-many-uni" />
@@ -17,6 +18,7 @@
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="hibernate-demo" target="11" />
+      <module name="hibernate-many-to-many" target="11" />
       <module name="hibernate-mysql" target="11" />
       <module name="hibernate-one-to-many-uni" target="11" />
       <module name="hibernate-one-to-one" target="11" />

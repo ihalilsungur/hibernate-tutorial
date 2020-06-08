@@ -15,6 +15,7 @@
         <module>hibernate_one_to_many</module>
         <module>hibernate_eager_lazy_demo</module>
         <module>hibernate-one-to-many-uni</module>
+        <module>hibernate-many-to-many</module>
     </modules>
 
     <properties>

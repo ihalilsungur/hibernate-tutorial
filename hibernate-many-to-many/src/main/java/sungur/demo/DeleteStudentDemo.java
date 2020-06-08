@@ -1,15 +1,12 @@
-package com.sungur.demo;
+package sungur.demo;
 
-import com.sungur.model.Course;
-import com.sungur.model.Instructor;
-import com.sungur.model.InstructorDetail;
-import com.sungur.model.Review;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
+import sungur.model.*;
 
 
-public class GetCourseAndReviewsDemo {
+public class DeleteStudentDemo {
 
     public static void main(String[] args) {
 
@@ -19,6 +16,7 @@ public class GetCourseAndReviewsDemo {
                 .addAnnotatedClass(InstructorDetail.class)
                 .addAnnotatedClass(Course.class)
                 .addAnnotatedClass(Review.class)
+                .addAnnotatedClass(Student.class)
                 .buildSessionFactory();
 
         // session baslatma
@@ -30,17 +28,13 @@ public class GetCourseAndReviewsDemo {
             // transaction baslatik
             session.beginTransaction();
 
-
-
-          // Bir course getir
-            long theId =4;
-            Course tempCourse = session.get(Course.class,theId);
-
-            // kursu yazdir
-            System.out.println(tempCourse);
-
-            // Bir kursa bagli reviews yazdir
-            System.out.println(tempCourse.getReviews());
+            // course Ongreciler eklenmesi
+            long studentId= 1;
+            Student tempStudent = session.get(Student.class,studentId);
+            System.out.println("Yuklnen Ogrenciler : "+tempStudent);
+            System.out.println("\n Kurslarimiz : "+tempStudent.getCourses());
+            System.out.println("\nSilinen Ogreciler : "+tempStudent);
+            session.delete(tempStudent);
 
 
             //commit transaction

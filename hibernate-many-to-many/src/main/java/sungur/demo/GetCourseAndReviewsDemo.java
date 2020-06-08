@@ -1,12 +1,13 @@
-package com.sungur.demo;
+package sungur.demo;
 
-import com.sungur.model.Course;
-import com.sungur.model.Instructor;
-import com.sungur.model.InstructorDetail;
-import com.sungur.model.Review;
+
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
+import sungur.model.Course;
+import sungur.model.Instructor;
+import sungur.model.InstructorDetail;
+import sungur.model.Review;
 
 
 public class GetCourseAndReviewsDemo {
